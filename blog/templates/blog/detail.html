@@ -1,0 +1,10 @@
+{% extends 'portfolio/base.html' %} {% block content %}
+
+<div class="container text-center">
+<h1><a href="{{ blog.url }}" style="color: black;">{{blog.title}}</a></h1>
+<h3>{{blog.date|date:'j E, y. l'}}</h3> 
+<р class="lead">{{ blog.description }}</p>
+
+
+</div>
+{% endblock %}
