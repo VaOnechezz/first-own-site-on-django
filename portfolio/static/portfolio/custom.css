@@ -72,21 +72,30 @@ body {
     background-image: url("https://dwstroy.ru/lessons/les3635/demo/img/concrete-texture.png");
    }
   
+   .card-columns{
+    z-index: 0;
+   }
    .card {
     /* width: 600px;
     height: 338px; */
     overflow: hidden;
     background: #000;
     cursor: none;
+    transition: .5s;
    }
-   .card img {
+   .card-img {
     width: 100%;
     transition: .5s;
     transform: rotate(-10deg) scale(1.3);
     filter: blur(1px);
     opacity: .5;
    }
-   .card-columns:hover .card img {
+
+   .card:hover {
+    transform: scale(1.3);
+    z-index: 1;
+   }
+   .card:hover .card-img {
     transform: rotate(0deg) scale(1);
     filter: blur(0px);
     opacity: 1;
@@ -117,7 +126,7 @@ body {
     /*border-left: 4px solid #ffb611;
     padding: 0 10px;*/
    }
-   .card-columns:hover .shadoww {
+   .card:hover .shadoww { /**/
     opacity: 0;
    }
    .card-title,.card-text::before,
